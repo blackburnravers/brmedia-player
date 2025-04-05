@@ -1,0 +1,40 @@
+/* assets/css/templates/audio-spatial.css */
+
+/* Container for the spatial audio player */
+.brmedia-audio-spatial {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 3D rotating player */
+.brmedia-audio-spatial .plyr {
+    transform-style: preserve-3d;
+    transform: rotateY(15deg) rotateX(10deg);
+    transition: transform 0.5s ease;
+}
+
+/* Hover effect to rotate back */
+.brmedia-audio-spatial:hover .plyr {
+    transform: rotateY(0deg) rotateX(0deg);
+}
+
+/* Controls with depth */
+.brmedia-audio-spatial .plyr__controls {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateZ(50px);
+}
+
+/* Volume slider with 3D effect */
+.brmedia-audio-spatial .plyr__volume input[type="range"] {
+    transform: translateZ(20px);
+}
+
+.panning-slider {
+    width: 100%;
+    margin-top: 10px;
+}

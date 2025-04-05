@@ -1,0 +1,45 @@
+/* assets/css/templates/video-cinematic.css */
+
+/* Video player container */
+.brmedia-video-cinematic {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #000;
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Cinematic bars (top and bottom) */
+.brmedia-video-cinematic::before,
+.brmedia-video-cinematic::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.brmedia-video-cinematic::before {
+    top: 0;
+}
+
+.brmedia-video-cinematic::after {
+    bottom: 0;
+}
+
+/* Video player */
+.brmedia-video-cinematic .plyr {
+    position: relative;
+    z-index: 2;
+}
+
+/* Controls with cinematic flair */
+.brmedia-video-cinematic .plyr__controls {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 20px;
+}

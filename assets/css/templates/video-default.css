@@ -1,0 +1,41 @@
+/* assets/css/templates/video-default.css */
+.brmedia-video-default {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.brmedia-video-default::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    z-index: 1;
+}
+
+.brmedia-video-default .plyr {
+    position: relative;
+    z-index: 2;
+}
+
+.brmedia-video-default .plyr__controls {
+    padding: 10px;
+    background: transparent;
+    color: #fff;
+}
+
+.brmedia-video-default .plyr__control {
+    transition: transform 0.2s ease;
+}
+
+.brmedia-video-default .plyr__control:hover {
+    transform: scale(1.1);
+}

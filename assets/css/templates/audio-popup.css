@@ -1,0 +1,56 @@
+/* assets/css/templates/audio-popup.css */
+.brmedia-audio-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.brmedia-audio-popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.brmedia-audio-popup .plyr {
+    margin-bottom: 15px;
+}
+
+.brmedia-audio-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.brmedia-audio-popup .close-btn:hover {
+    color: #ff6b6b;
+}
+
+.brmedia-audio-popup-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.brmedia-audio-popup-backdrop.active {
+    opacity: 1;
+}

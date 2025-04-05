@@ -1,0 +1,40 @@
+/* assets/css/templates/audio-default.css */
+.brmedia-audio-default {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.brmedia-audio-default .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    clip-path: url(#waveClip);
+    animation: waveFlow 5s linear infinite;
+}
+
+.brmedia-audio-default .plyr {
+    position: relative;
+    z-index: 1;
+}
+
+/* SVG clip path for wave effect */
+svg.wave-clip {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+@keyframes waveFlow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}

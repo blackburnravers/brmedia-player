@@ -1,0 +1,42 @@
+/* assets/css/templates/video-compact.css */
+.brmedia-video-compact {
+    width: 100%;
+    max-width: 350px;
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.brmedia-video-compact:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.brmedia-video-compact .plyr {
+    --plyr-color-main: #ff6b6b;
+}
+
+.brmedia-video-compact .plyr__controls {
+    padding: 5px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.brmedia-video-compact .plyr__control {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #444;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.brmedia-video-compact .plyr__control:hover {
+    background: #ff6b6b;
+}
