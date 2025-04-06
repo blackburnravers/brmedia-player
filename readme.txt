@@ -1,6 +1,6 @@
 === BRMedia Player ===
 Contributors: rhyscole
-Donate link: https://www.blackburnravers.co.uk/donate
+Link: https://www.blackburnravers.co.uk/
 Tags: media, audio, video, player, streaming, dj, podcast, analytics, api, ai
 Requires at least: 5.0
 Tested up to: 6.5
