@@ -1,115 +1,55 @@
 /* admin.css */
 
 /* General styles */
-body {
+.brmedia-wrap {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-}
-
-.admin-wrapper {
-    display: flex;
-    flex-direction: row;
-}
-
-/* Sidebar styles */
-.sidebar {
-    background-color: #333;
-    color: white;
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
     padding: 20px;
 }
 
-.sidebar h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.sidebar a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.sidebar a:hover {
-    background-color: #444;
-}
-
-/* Main content styles */
-.main-content {
-    margin-left: 270px;
+.brmedia-wrap .main-content {
     padding: 20px;
-    width: calc(100% - 270px);
-}
-
-.card {
-    background-color: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card h2 {
+.brmedia-wrap .main-content h1 {
     margin-top: 0;
 }
 
-.card p {
-    color: #555;
-}
-
-/* Dashboard styles */
-.dashboard {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.module-card {
-    width: calc(33.33% - 20px);
-    margin-right: 20px;
+.brmedia-wrap .button-primary {
     margin-bottom: 20px;
 }
 
-.module-card:last-child {
-    margin-right: 0;
-}
-
 /* Table styles */
-.table {
+.brmedia-wrap .wp-list-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
 }
 
-.table th, .table td {
+.brmedia-wrap .wp-list-table th, .brmedia-wrap .wp-list-table td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
 }
 
-.table th {
+.brmedia-wrap .wp-list-table th {
     background-color: #f4f4f4;
 }
 
 /* Form styles */
-.form-group {
+.brmedia-wrap .form-group {
     margin-bottom: 20px;
 }
 
-.form-group label {
+.brmedia-wrap .form-group label {
     display: block;
     margin-bottom: 5px;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.brmedia-wrap .form-group input, .brmedia-wrap .form-group select, .brmedia-wrap .form-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -117,7 +57,7 @@ body {
 }
 
 /* Button styles */
-.button {
+.brmedia-wrap .button {
     padding: 10px 20px;
     background-color: #333;
     color: white;
@@ -126,12 +66,12 @@ body {
     cursor: pointer;
 }
 
-.button:hover {
+.brmedia-wrap .button:hover {
     background-color: #555;
 }
 
 /* Widget styles */
-.widget {
+.brmedia-wrap .widget {
     margin-bottom: 20px;
     padding: 20px;
     background-color: white;
