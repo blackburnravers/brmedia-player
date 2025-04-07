@@ -64,25 +64,18 @@ class BRMedia_Frontend_Shortcodes {
 
         ob_start();
 
-        echo '<div class="brmedia-music-player">';
+        $music_file = get_post_meta( $post_id, '_brmusic_file', true );
+        $music_url = get_post_meta( $post_id, '_brmusic_url', true );
+        $audio_source = $music_file ? $music_file : $music_url;
+
+        // Display player and information
+        echo '<div class="brmedia-music-player" id="waveform-' . esc_attr( $post_id ) . '" data-audio-source="' . esc_url( $audio_source ) . '"></div>';
+        echo '<button id="play-pause-' . esc_attr( $post_id ) . '"><i class="fas fa-play"></i></button>';
+
         echo '<h2>' . esc_html( get_the_title( $post_id ) ) . '</h2>';
         echo '<p>' . esc_html( get_post_meta( $post_id, '_brmusic_artist', true ) ) . '</p>';
         echo '<p>' . esc_html( get_post_meta( $post_id, '_brmusic_album', true ) ) . '</p>';
         echo '<p>' . esc_html( get_post_meta( $post_id, '_brmusic_year', true ) ) . '</p>';
-
-        $music_file = get_post_meta( $post_id, '_brmusic_file', true );
-        $music_url = get_post_meta( $post_id, '_brmusic_url', true );
-        $tracklist_file = get_post_meta( $post_id, '_brmusic_tracklist', true );
-        $tracklist_url = get_post_meta( $post_id, '_brmusic_tracklist_url', true );
-
-        // Display audio player
-        if ( $music_file || $music_url ) {
-            $audio_source = $music_file ? $music_file : $music_url;
-            echo '<audio controls>';
-            echo '<source src="' . esc_url( $audio_source ) . '" type="audio/mpeg">';
-            echo __( 'Your browser does not support the audio element.', 'brmedia-player' );
-            echo '</audio>';
-        }
 
         // Display cover image (featured image)
         if ( has_post_thumbnail( $post_id ) ) {
@@ -90,6 +83,8 @@ class BRMedia_Frontend_Shortcodes {
         }
 
         // Display tracklist
+        $tracklist_file = get_post_meta( $post_id, '_brmusic_tracklist', true );
+        $tracklist_url = get_post_meta( $post_id, '_brmusic_tracklist_url', true );
         if ( $tracklist_file || $tracklist_url ) {
             $tracklist_source = $tracklist_file ? $tracklist_file : $tracklist_url;
             $tracklist_content = file_get_contents( $tracklist_source );
