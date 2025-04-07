@@ -1,0 +1,20 @@
+.brmedia-music-player {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #f5f5f5; /* Default background color */
+    color: #333; /* Default text color */
+    text-align: center;
+}
+
+.brmedia-music-player audio {
+    width: 100%;
+}
+
+.brmedia-music-player .fa-play, .brmedia-music-player .fa-pause {
+    font-size: 24px; /* Default icon size */
+    color: #333; /* Default icon color */
+    cursor: pointer;
+    margin-top: 10px;
+}
