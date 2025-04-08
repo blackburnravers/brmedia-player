@@ -1,0 +1,115 @@
+/* BRMedia Player Admin CSS */
+
+/* General Admin Styles */
+.brmedia-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brmedia-module-stats,
+.brmedia-module-controls,
+.brmedia-quick-links {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.brmedia-module-stat {
+    margin-bottom: 15px;
+}
+
+.brmedia-module-stat h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.brmedia-module-stat p {
+    margin: 5px 0;
+}
+
+.brmedia-module-controls label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.brmedia-quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.brmedia-quick-links li {
+    margin-bottom: 10px;
+}
+
+.brmedia-quick-links a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.brmedia-quick-links a:hover {
+    text-decoration: underline;
+}
+
+/* Shortcodes Manager */
+.brmedia-shortcode {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.brmedia-shortcode h2 {
+    margin-top: 0;
+}
+
+.brmedia-shortcode code {
+    display: block;
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.brmedia-preview {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+/* Analytics Charts */
+canvas {
+    max-width: 100%;
+}
+
+/* Chat Styles (Admin Preview) */
+#brmedia-chat {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fff;
+}
+
+#chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#chat-form {
+    display: flex;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 5px;
+}
+
+#chat-send {
+    padding: 5px 10px;
+}

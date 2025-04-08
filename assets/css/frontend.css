@@ -1,0 +1,500 @@
+/* BRMedia Player Frontend CSS */
+
+/* Audio Player (WaveSurfer.js) */
+.wavesurfer-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.wavesurfer-wave {
+    height: 100%;
+}
+
+.wavesurfer-region {
+    background: rgba(0, 123, 255, 0.3);
+}
+
+/* Video Player (Video.js) */
+.video-js {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Download Buttons */
+.brmedia-download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.brmedia-download-button:hover {
+    background: #005a87;
+}
+
+.brmedia-download-big {
+    font-size: 20px;
+    padding: 15px 30px;
+}
+
+.brmedia-download-small {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.brmedia-download-massive {
+    font-size: 24px;
+    padding: 20px 40px;
+}
+
+.brmedia-download-icon-only {
+    padding: 10px;
+    background: transparent;
+    color: #0073aa;
+    border: none;
+    font-size: 24px;
+}
+
+.brmedia-download-progress {
+    position: relative;
+    padding: 10px 20px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.brmedia-download-progress::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #0073aa;
+    transition: width 0.3s;
+}
+
+.brmedia-download-progress:hover::after {
+    width: 100%;
+}
+
+/* Chat Interface */
+#brmedia-chat {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#chat-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+#chat-form {
+    display: flex;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px 0 0 3px;
+}
+
+#chat-send {
+    padding: 10px 20px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+#chat-send:hover {
+    background: #005a87;
+}
+
+/* Audio Player Templates */
+.brmedia-audio-player {
+    margin-bottom: 20px;
+}
+
+.brmedia-audio-player h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #0073aa;
+}
+
+.controls button:hover {
+    color: #005a87;
+}
+
+.metadata p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Compact Player */
+.brmedia-audio-player.compact .wavesurfer-container {
+    height: 50px;
+}
+
+.brmedia-audio-player.compact .controls {
+    margin-top: 5px;
+}
+
+.brmedia-audio-player.compact .title {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Playlist Player */
+.brmedia-audio-player.playlist .playlist-tracks ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.brmedia-audio-player.playlist .playlist-tracks li {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.brmedia-audio-player.playlist .playlist-tracks li:hover {
+    background: #f4f4f4;
+}
+
+/* Popup and Fullscreen Players */
+.brmedia-popup-button {
+    padding: 10px 20px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.brmedia-popup-button:hover {
+    background: #005a87;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .brmedia-audio-player {
+        width: 100%;
+    }
+    .controls {
+        flex-wrap: wrap;
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Download Button Base Styles */
+.brmedia-download-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #6a0dad, #4a0080); /* Purple gradient from Mixcloud */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.brmedia-download-button i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.brmedia-download-button:hover {
+    background: linear-gradient(135deg, #4a0080, #2a0040);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(106, 13, 173, 0.5);
+}
+
+/* Size Variations */
+.brmedia-download-button.big {
+    padding: 16px 32px;
+    font-size: 18px;
+}
+
+.brmedia-download-button.small {
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.brmedia-download-button.massive {
+    padding: 20px 40px;
+    font-size: 24px;
+}
+
+.brmedia-download-button.icon-only {
+    padding: 12px;
+    background: transparent;
+    color: #6a0dad;
+    border: 2px solid #6a0dad;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+}
+
+.brmedia-download-button.icon-only:hover {
+    background: #6a0dad;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Progress Bar Styles */
+.brmedia-download-progress {
+    position: relative;
+    padding: 12px 24px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.brmedia-download-progress .progress-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #6a0dad;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.brmedia-download-progress .progress-button i {
+    margin-right: 8px;
+}
+
+.brmedia-download-progress .progress-button:hover {
+    color: #4a0080;
+}
+
+.brmedia-download-progress .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+}
+
+.brmedia-download-progress .progress {
+    height: 100%;
+    background: #6a0dad;
+    transition: width 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .brmedia-download-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .brmedia-download-button.massive {
+        padding: 16px 32px;
+        font-size: 20px;
+    }
+}
+
+/* Base Styles */
+:root {
+    --primary-color: #0073aa;
+    --secondary-color: #005a87;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+.brmedia-gaming-default, .brmedia-radio-default {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+/* Gaming Template Styles */
+.brmedia-gaming-default {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stream-container, .chat-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.stream-container iframe, .chat-container iframe {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.stream-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px;
+    background: var(--background-color);
+    border-radius: 5px;
+}
+
+.stream-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.stream-info p {
+    margin: 5px 0;
+}
+
+.follow-button {
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.follow-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Radio Template Styles */
+.brmedia-radio-default .player-container {
+    margin-bottom: 15px;
+}
+
+.brmedia-radio-default audio {
+    width: 100%;
+    max-width: 500px;
+}
+
+.track-info h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.schedule h4 {
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+.schedule p {
+    margin: 5px 0;
+}
+
+/* Popup Styles */
+.brmedia-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 90%;
+    text-align: center;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.close-popup:hover {
+    background: var(--secondary-color);
+}
+
+.brmedia-gaming-popup-button, .brmedia-radio-popup-button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.brmedia-gaming-popup-button:hover, .brmedia-radio-popup-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .brmedia-gaming-default {
+        flex-direction: column;
+    }
+
+    .stream-container iframe, .chat-container iframe {
+        height: auto;
+    }
+
+    .brmedia-radio-default audio {
+        max-width: 100%;
+    }
+}
